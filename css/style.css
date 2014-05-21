@@ -1,0 +1,465 @@
+/***********************
+General
+***********************/
+
+body {
+    color: white;
+    background: black;
+}
+
+/***********************
+Header
+***********************/
+
+#header h1 {
+    font: 400 3em "Raleway", 'Helvetica Neue', 'Helvetica', sans-serif;
+    letter-spacing: 3px;
+    margin: 28px 0 0 35px;
+    float: left;
+    color: purple;
+}
+
+/************************
+Cube
+*************************/
+
+.container {
+    width: 100px;
+    height: 100px;
+    margin: 30px 0 0 0;
+    float: right;
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+    
+    perspective-origin: 350% -170%;
+    -webkit-perspective-origin: 350% -170%;
+    -moz-perspective-origin: 350% -170%;
+    -o-perspective-origin: 350% -170%;
+}
+
+.face {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    
+    /*animation: border-change 8s infinite;
+    -webkit-animation: border-change 8s infinite;
+    -moz-animation: border-change 8s infinite;
+    -o-animation: border-change 8s infinite;*/
+}
+
+.front {
+    transform: translateZ(25px);
+    -webkit-transform: translateZ(25px);
+    -moz-transform: translateZ(25px);
+    -o-transform: translateZ(25px);
+    
+    animation: border-change-front 5s infinite;
+    -webkit-animation: border-change-front 5s infinite;
+    -moz-animation: border-change-front 5s infinite;
+    -o-animation: border-change-front 5s infinite;
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(25px);
+    -webkit-transform: rotateY(180deg) translateZ(25px);
+    -moz-transform: rotateY(180deg) translateZ(25px);
+    -o-transform: rotateY(180deg) translateZ(25px);
+    
+    animation: border-change-front 6s infinite;
+    -webkit-animation: border-change-front 6s infinite;
+    -moz-animation: border-change-front 6s infinite;
+    -o-animation: border-change-front 6s infinite;
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(25px);
+    -webkit-transform: rotateY(90deg) translateZ(25px);
+    -moz-transform: rotateY(90deg) translateZ(25px);
+    -o-transform: rotateY(90deg) translateZ(25px);
+    
+    animation: border-change-front 7s infinite;
+    -webkit-animation: border-change-front 7s infinite;
+    -moz-animation: border-change-front 7s infinite;
+    -o-animation: border-change-front 7s infinite;
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(25px);
+    -webkit-transform: rotateY(-90deg) translateZ(25px);
+    -moz-transform: rotateY(-90deg) translateZ(25px);
+    -o-transform: rotateY(-90deg) translateZ(25px);
+    
+    animation: border-change-front 8s infinite;
+    -webkit-animation: border-change-front 8s infinite;
+    -moz-animation: border-change-front 8s infinite;
+    -o-animation: border-change-front 8s infinite;
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(25px);
+    -webkit-transform: rotateX(90deg) translateZ(25px);
+    -moz-transform: rotateX(90deg) translateZ(25px);
+    -o-transform: rotateX(90deg) translateZ(25px);
+    
+    animation: border-change-front 9s infinite;
+    -webkit-animation: border-change-front 9s infinite;
+    -moz-animation: border-change-front 9s infinite;
+    -o-animation: border-change-front 9s infinite;
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(25px);
+    -webkit-transform: rotateX(-90deg) translateZ(25px);
+    -moz-transform: rotateX(-90deg) translateZ(25px);
+    -o-transform: rotateX(-90deg) translateZ(25px);
+    
+    animation: border-change-front 4s infinite;
+    -webkit-animation: border-change-front 4s infinite;
+    -moz-animation: border-change-front 4s infinite;
+    -o-animation: border-change-front 4s infinite;
+}
+
+/***********************
+Pre-Order
+***********************/
+
+#slogan {
+    clear: both;
+}
+
+#slogan-p {
+    display: none;
+    color: #51d4f2;
+    text-align: center;
+    font: 200 1.75em "Raleway", 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+/***********************
+Diagram
+***********************/
+
+#diagram p {
+    display: none;
+    font: 200 1em "Raleway", 'Helvetica Neue', 'Helvetica', sans-serif;
+    text-align: center;
+    width: 60%;
+    margin: 20px auto;
+    line-height: 1.5em;
+}
+
+img {
+    padding-top: 30px;
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#speaker, #mid {
+    animation: position-change 4s 1 ease-in-out;
+    -webkit-animation: position-change 4s 1 ease-in-out;
+    -moz-animation: position-change 4s 1 ease-in-out;
+    -o-animation: position-change 4s 1 ease-in-out;
+}
+
+/***********************
+Footer
+***********************/
+
+#footer {
+    text-align: center;
+    margin: 120px 0 20px 0;
+}
+
+#footer a {
+    text-decoration: none;
+    font: 200 1em "Raleway", 'Helvetica Neue', 'Helvetica', sans-serif;
+    color: #51d4f2;
+}
+
+#facebook, #twitter, #github {
+    margin: 20px 10px;
+}
+
+/************************
+Animations
+************************/
+
+/*Entire Cube Color Changing*/
+
+@keyframes border-change {
+    0% {border: 1px solid orange;}
+    20% {border: 1px solid red;}
+    40% {border: 1px solid purple;}
+    60% {border: 1px solid blue;}
+    80% {border: 1px solid green;}
+    100% {border: 1px solid orange;}
+}
+
+@-webkit-keyframes border-change {
+    0% {border: 1px solid orange;}
+    20% {border: 1px solid red;}
+    40% {border: 1px solid purple;}
+    60% {border: 1px solid blue;}
+    80% {border: 1px solid green;}
+    100% {border: 1px solid orange;}
+}
+
+@-moz-keyframes border-change {
+    0% {border: 1px solid orange;}
+    20% {border: 1px solid red;}
+    40% {border: 1px solid purple;}
+    60% {border: 1px solid blue;}
+    80% {border: 1px solid green;}
+    100% {border: 1px solid orange;}
+}
+
+@-o-keyframes border-change {
+    0% {border: 1px solid orange;}
+    20% {border: 1px solid red;}
+    40% {border: 1px solid purple;}
+    60% {border: 1px solid blue;}
+    80% {border: 1px solid green;}
+    100% {border: 1px solid orange;}
+}
+
+/*Edges of Cube Changing Color Independently*/
+
+@keyframes border-change-front {
+    0% {
+        border-left: 1px solid orange;
+        border-right: 1px solid red;
+        border-top: 1px solid purple;
+        border-bottom: 1px solid blue;
+    }
+    
+    20% {
+        border-left: 1px solid red;
+        border-right: 1px solid purple;
+        border-top: 1px solid blue;
+        border-bottom: 1px solid green;
+    }
+    
+    40% {
+        border-left: 1px solid purple;
+        border-right: 1px solid blue;
+        border-top: 1px solid green;
+        border-bottom: 1px solid orange;
+    }
+    
+    60% {
+        border-left: 1px solid blue;
+        border-right: 1px solid green;
+        border-top: 1px solid orange;
+        border-bottom: 1px solid red;
+    }
+    
+    80% {
+        border-left: 1px solid green;
+        border-right: 1px solid orange;
+        border-top: 1px solid red;
+        border-bottom: 1px solid purple;
+    }
+    
+    100% {
+        border-left: 1px solid orange;
+        border-right: 1px solid red;
+        border-top: 1px solid purple;
+        border-bottom: 1px solid blue;
+    }
+}
+
+@-webkit-keyframes border-change-front {
+    0% {
+        border-left: 1px solid orange;
+        border-right: 1px solid red;
+        border-top: 1px solid purple;
+        border-bottom: 1px solid blue;
+    }
+    
+    20% {
+        border-left: 1px solid red;
+        border-right: 1px solid purple;
+        border-top: 1px solid blue;
+        border-bottom: 1px solid green;
+    }
+    
+    40% {
+        border-left: 1px solid purple;
+        border-right: 1px solid blue;
+        border-top: 1px solid green;
+        border-bottom: 1px solid orange;
+    }
+    
+    60% {
+        border-left: 1px solid blue;
+        border-right: 1px solid green;
+        border-top: 1px solid orange;
+        border-bottom: 1px solid red;
+    }
+    
+    80% {
+        border-left: 1px solid green;
+        border-right: 1px solid orange;
+        border-top: 1px solid red;
+        border-bottom: 1px solid purple;
+    }
+    
+    100% {
+        border-left: 1px solid orange;
+        border-right: 1px solid red;
+        border-top: 1px solid purple;
+        border-bottom: 1px solid blue;
+    }
+}
+
+@-moz-keyframes border-change-front {
+    0% {
+        border-left: 1px solid orange;
+        border-right: 1px solid red;
+        border-top: 1px solid purple;
+        border-bottom: 1px solid blue;
+    }
+    
+    20% {
+        border-left: 1px solid red;
+        border-right: 1px solid purple;
+        border-top: 1px solid blue;
+        border-bottom: 1px solid green;
+    }
+    
+    40% {
+        border-left: 1px solid purple;
+        border-right: 1px solid blue;
+        border-top: 1px solid green;
+        border-bottom: 1px solid orange;
+    }
+    
+    60% {
+        border-left: 1px solid blue;
+        border-right: 1px solid green;
+        border-top: 1px solid orange;
+        border-bottom: 1px solid red;
+    }
+    
+    80% {
+        border-left: 1px solid green;
+        border-right: 1px solid orange;
+        border-top: 1px solid red;
+        border-bottom: 1px solid purple;
+    }
+    
+    100% {
+        border-left: 1px solid orange;
+        border-right: 1px solid red;
+        border-top: 1px solid purple;
+        border-bottom: 1px solid blue;
+    }
+}
+
+@-o-keyframes border-change-front {
+    0% {
+        border-left: 1px solid orange;
+        border-right: 1px solid red;
+        border-top: 1px solid purple;
+        border-bottom: 1px solid blue;
+    }
+    
+    20% {
+        border-left: 1px solid red;
+        border-right: 1px solid purple;
+        border-top: 1px solid blue;
+        border-bottom: 1px solid green;
+    }
+    
+    40% {
+        border-left: 1px solid purple;
+        border-right: 1px solid blue;
+        border-top: 1px solid green;
+        border-bottom: 1px solid orange;
+    }
+    
+    60% {
+        border-left: 1px solid blue;
+        border-right: 1px solid green;
+        border-top: 1px solid orange;
+        border-bottom: 1px solid red;
+    }
+    
+    80% {
+        border-left: 1px solid green;
+        border-right: 1px solid orange;
+        border-top: 1px solid red;
+        border-bottom: 1px solid purple;
+    }
+    
+    100% {
+        border-left: 1px solid orange;
+        border-right: 1px solid red;
+        border-top: 1px solid purple;
+        border-bottom: 1px solid blue;
+    }
+}
+
+/*Diagram Movement*/
+
+@keyframes position-change {
+    0% {
+        transform: translateZ(0);
+        margin-top: -200px;
+    }
+}
+
+@-webkit-keyframes position-change {
+    0% {
+        transform: translateZ(0);
+        margin-top: -200px;
+    }
+}
+
+@-moz-keyframes position-change {
+    0% {
+        transform: translateZ(0);
+        margin-top: -200px;
+    }
+}
+
+@-o-keyframes position-change {
+    0% {
+        transform: translateZ(0);
+        margin-top: -200px;
+    }
+}
+
+/************************
+Media Queries
+*************************/
+
+@media only screen and (min-width: 768px) {
+    #header h1 {
+        margin: 28px 0 0 100px;
+    }
+    
+    .container {
+        margin: 30px 80px 0 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #header h1 {
+        margin: 28px 0 0 250px;
+    }
+    
+    .container {
+        margin: 30px 180px 0 0;
+    }
+}
