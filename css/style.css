@@ -1,4 +1,14 @@
 /***********************
+COLOR LIST
+-----------
+Purple: #4D0577
+Red: #E80C0C
+Orange: #E8560C
+Green: #11D80B
+Yellow: #A4CE0B
+**********************/
+
+/***********************
 General
 ***********************/
 
@@ -16,7 +26,7 @@ Header
     letter-spacing: 3px;
     margin: 28px 0 0 35px;
     float: left;
-    color: purple;
+    color: #4D0577;
 }
 
 /************************
@@ -51,10 +61,10 @@ Cube
     height: 50px;
     border: 1px solid white;
     
-    /*animation: border-change 8s infinite;
-    -webkit-animation: border-change 8s infinite;
-    -moz-animation: border-change 8s infinite;
-    -o-animation: border-change 8s infinite;*/
+    /*animation: border-change 8s infinite cubic-bezier(1,.01,1,.01);
+    -webkit-animation: border-change 8s infinite cubic-bezier(1,.01,1,.01);
+    -moz-animation: border-change 8s infinite cubic-bezier(1,.01,1,.01);
+    -o-animation: border-change 8s infinite cubic-bezier(1,.01,1,.01);*/
 }
 
 .front {
@@ -63,10 +73,10 @@ Cube
     -moz-transform: translateZ(25px);
     -o-transform: translateZ(25px);
     
-    animation: border-change-front 5s infinite;
-    -webkit-animation: border-change-front 5s infinite;
-    -moz-animation: border-change-front 5s infinite;
-    -o-animation: border-change-front 5s infinite;
+    animation: border-change-front 5s infinite cubic-bezier(1,.01,1,.01);
+    -webkit-animation: border-change-front 5s infinite cubic-bezier(1,.01,1,.01);
+    -moz-animation: border-change-front 5s infinite cubic-bezier(1,.01,1,.01);
+    -o-animation: border-change-front 5s infinite cubic-bezier(1,.01,1,.01);
 }
 
 .back {
@@ -75,10 +85,10 @@ Cube
     -moz-transform: rotateY(180deg) translateZ(25px);
     -o-transform: rotateY(180deg) translateZ(25px);
     
-    animation: border-change-front 6s infinite;
-    -webkit-animation: border-change-front 6s infinite;
-    -moz-animation: border-change-front 6s infinite;
-    -o-animation: border-change-front 6s infinite;
+    animation: border-change-front 6s infinite cubic-bezier(1,.01,1,.01);
+    -webkit-animation: border-change-front 6s infinite cubic-bezier(1,.01,1,.01);
+    -moz-animation: border-change-front 6s infinite cubic-bezier(1,.01,1,.01);
+    -o-animation: border-change-front 6s infinite cubic-bezier(1,.01,1,.01);
 }
 
 .right {
@@ -87,10 +97,10 @@ Cube
     -moz-transform: rotateY(90deg) translateZ(25px);
     -o-transform: rotateY(90deg) translateZ(25px);
     
-    animation: border-change-front 7s infinite;
-    -webkit-animation: border-change-front 7s infinite;
-    -moz-animation: border-change-front 7s infinite;
-    -o-animation: border-change-front 7s infinite;
+    animation: border-change-front 7s infinite cubic-bezier(1,.01,1,.01);
+    -webkit-animation: border-change-front 7s infinite cubic-bezier(1,.01,1,.01);
+    -moz-animation: border-change-front 7s infinite cubic-bezier(1,.01,1,.01);
+    -o-animation: border-change-front 7s infinite cubic-bezier(1,.01,1,.01);
 }
 
 .left {
@@ -99,10 +109,10 @@ Cube
     -moz-transform: rotateY(-90deg) translateZ(25px);
     -o-transform: rotateY(-90deg) translateZ(25px);
     
-    animation: border-change-front 8s infinite;
-    -webkit-animation: border-change-front 8s infinite;
-    -moz-animation: border-change-front 8s infinite;
-    -o-animation: border-change-front 8s infinite;
+    animation: border-change-front 8s infinite cubic-bezier(1,.01,1,.01);
+    -webkit-animation: border-change-front 8s infinite cubic-bezier(1,.01,1,.01);
+    -moz-animation: border-change-front 8s infinite cubic-bezier(1,.01,1,.01);
+    -o-animation: border-change-front 8s infinite cubic-bezier(1,.01,1,.01);
 }
 
 .top {
@@ -111,10 +121,10 @@ Cube
     -moz-transform: rotateX(90deg) translateZ(25px);
     -o-transform: rotateX(90deg) translateZ(25px);
     
-    animation: border-change-front 9s infinite;
-    -webkit-animation: border-change-front 9s infinite;
-    -moz-animation: border-change-front 9s infinite;
-    -o-animation: border-change-front 9s infinite;
+    animation: border-change-front 9s infinite cubic-bezier(1,.01,1,.01);
+    -webkit-animation: border-change-front 9s infinite cubic-bezier(1,.01,1,.01);
+    -moz-animation: border-change-front 9s infinite cubic-bezier(1,.01,1,.01);
+    -o-animation: border-change-front 9s infinite cubic-bezier(1,.01,1,.01);
 }
 
 .bottom {
@@ -123,10 +133,10 @@ Cube
     -moz-transform: rotateX(-90deg) translateZ(25px);
     -o-transform: rotateX(-90deg) translateZ(25px);
     
-    animation: border-change-front 4s infinite;
-    -webkit-animation: border-change-front 4s infinite;
-    -moz-animation: border-change-front 4s infinite;
-    -o-animation: border-change-front 4s infinite;
+    animation: border-change-front 4s infinite cubic-bezier(1,.01,1,.01);
+    -webkit-animation: border-change-front 4s infinite cubic-bezier(1,.01,1,.01);
+    -moz-animation: border-change-front 4s infinite cubic-bezier(1,.01,1,.01);
+    -o-animation: border-change-front 4s infinite cubic-bezier(1,.01,1,.01);
 }
 
 /***********************
@@ -197,216 +207,216 @@ Animations
 /*Entire Cube Color Changing*/
 
 @keyframes border-change {
-    0% {border: 1px solid orange;}
-    20% {border: 1px solid red;}
-    40% {border: 1px solid purple;}
-    60% {border: 1px solid blue;}
-    80% {border: 1px solid green;}
-    100% {border: 1px solid orange;}
+    0% {border: 1px solid #E8560C;}
+    20% {border: 1px solid #E80C0C;}
+    40% {border: 1px solid #4D0577;}
+    60% {border: 1px solid #4D0577;}
+    80% {border: 1px solid #11D80B;}
+    100% {border: 1px solid #E8560C;}
 }
 
 @-webkit-keyframes border-change {
-    0% {border: 1px solid orange;}
-    20% {border: 1px solid red;}
-    40% {border: 1px solid purple;}
-    60% {border: 1px solid blue;}
-    80% {border: 1px solid green;}
-    100% {border: 1px solid orange;}
+    0% {border: 1px solid #E8560C;}
+    20% {border: 1px solid #E80C0C;}
+    40% {border: 1px solid #4D0577;}
+    60% {border: 1px solid #4D0577;}
+    80% {border: 1px solid #11D80B;}
+    100% {border: 1px solid #E8560C;}
 }
 
 @-moz-keyframes border-change {
-    0% {border: 1px solid orange;}
-    20% {border: 1px solid red;}
-    40% {border: 1px solid purple;}
-    60% {border: 1px solid blue;}
-    80% {border: 1px solid green;}
-    100% {border: 1px solid orange;}
+    0% {border: 1px solid #E8560C;}
+    20% {border: 1px solid #E80C0C;}
+    40% {border: 1px solid #4D0577;}
+    60% {border: 1px solid #4D0577;}
+    80% {border: 1px solid #11D80B;}
+    100% {border: 1px solid #E8560C;}
 }
 
 @-o-keyframes border-change {
-    0% {border: 1px solid orange;}
-    20% {border: 1px solid red;}
-    40% {border: 1px solid purple;}
-    60% {border: 1px solid blue;}
-    80% {border: 1px solid green;}
-    100% {border: 1px solid orange;}
+    0% {border: 1px solid #E8560C;}
+    20% {border: 1px solid #E80C0C;}
+    40% {border: 1px solid #4D0577;}
+    60% {border: 1px solid #4D0577;}
+    80% {border: 1px solid #11D80B;}
+    100% {border: 1px solid #E8560C;}
 }
 
 /*Edges of Cube Changing Color Independently*/
 
 @keyframes border-change-front {
     0% {
-        border-left: 1px solid orange;
-        border-right: 1px solid red;
-        border-top: 1px solid purple;
-        border-bottom: 1px solid blue;
+        border-left: 1px solid #E8560C;
+        border-right: 1px solid #E80C0C;
+        border-top: 1px solid #4D0577;
+        border-bottom: 1px solid #4D0577;
     }
     
     20% {
-        border-left: 1px solid red;
-        border-right: 1px solid purple;
-        border-top: 1px solid blue;
-        border-bottom: 1px solid green;
+        border-left: 1px solid #E80C0C;
+        border-right: 1px solid #4D0577;
+        border-top: 1px solid #4D0577;
+        border-bottom: 1px solid #11D80B;
     }
     
     40% {
-        border-left: 1px solid purple;
-        border-right: 1px solid blue;
-        border-top: 1px solid green;
-        border-bottom: 1px solid orange;
+        border-left: 1px solid #4D0577;
+        border-right: 1px solid #4D0577;
+        border-top: 1px solid #11D80B;
+        border-bottom: 1px solid #E8560C;
     }
     
     60% {
-        border-left: 1px solid blue;
-        border-right: 1px solid green;
-        border-top: 1px solid orange;
-        border-bottom: 1px solid red;
+        border-left: 1px solid #4D0577;
+        border-right: 1px solid #11D80B;
+        border-top: 1px solid #E8560C;
+        border-bottom: 1px solid #E80C0C;
     }
     
     80% {
-        border-left: 1px solid green;
-        border-right: 1px solid orange;
-        border-top: 1px solid red;
-        border-bottom: 1px solid purple;
+        border-left: 1px solid #11D80B;
+        border-right: 1px solid #E8560C;
+        border-top: 1px solid #E80C0C;
+        border-bottom: 1px solid #4D0577;
     }
     
     100% {
-        border-left: 1px solid orange;
-        border-right: 1px solid red;
-        border-top: 1px solid purple;
-        border-bottom: 1px solid blue;
+        border-left: 1px solid #E8560C;
+        border-right: 1px solid #E80C0C;
+        border-top: 1px solid #4D0577;
+        border-bottom: 1px solid #4D0577;
     }
 }
 
 @-webkit-keyframes border-change-front {
     0% {
-        border-left: 1px solid orange;
-        border-right: 1px solid red;
-        border-top: 1px solid purple;
-        border-bottom: 1px solid blue;
+        border-left: 1px solid #E8560C;
+        border-right: 1px solid #E80C0C;
+        border-top: 1px solid #4D0577;
+        border-bottom: 1px solid #4D0577;
     }
     
     20% {
-        border-left: 1px solid red;
-        border-right: 1px solid purple;
-        border-top: 1px solid blue;
-        border-bottom: 1px solid green;
+        border-left: 1px solid #E80C0C;
+        border-right: 1px solid #4D0577;
+        border-top: 1px solid #4D0577;
+        border-bottom: 1px solid #11D80B;
     }
     
     40% {
-        border-left: 1px solid purple;
-        border-right: 1px solid blue;
-        border-top: 1px solid green;
-        border-bottom: 1px solid orange;
+        border-left: 1px solid #4D0577;
+        border-right: 1px solid #4D0577;
+        border-top: 1px solid #11D80B;
+        border-bottom: 1px solid #E8560C;
     }
     
     60% {
-        border-left: 1px solid blue;
-        border-right: 1px solid green;
-        border-top: 1px solid orange;
-        border-bottom: 1px solid red;
+        border-left: 1px solid #4D0577;
+        border-right: 1px solid #11D80B;
+        border-top: 1px solid #E8560C;
+        border-bottom: 1px solid #E80C0C;
     }
     
     80% {
-        border-left: 1px solid green;
-        border-right: 1px solid orange;
-        border-top: 1px solid red;
-        border-bottom: 1px solid purple;
+        border-left: 1px solid #11D80B;
+        border-right: 1px solid #E8560C;
+        border-top: 1px solid #E80C0C;
+        border-bottom: 1px solid #4D0577;
     }
     
     100% {
-        border-left: 1px solid orange;
-        border-right: 1px solid red;
-        border-top: 1px solid purple;
-        border-bottom: 1px solid blue;
+        border-left: 1px solid #E8560C;
+        border-right: 1px solid #E80C0C;
+        border-top: 1px solid #4D0577;
+        border-bottom: 1px solid #4D0577;
     }
 }
 
 @-moz-keyframes border-change-front {
     0% {
-        border-left: 1px solid orange;
-        border-right: 1px solid red;
-        border-top: 1px solid purple;
-        border-bottom: 1px solid blue;
+        border-left: 1px solid #E8560C;
+        border-right: 1px solid #E80C0C;
+        border-top: 1px solid #4D0577;
+        border-bottom: 1px solid #4D0577;
     }
     
     20% {
-        border-left: 1px solid red;
-        border-right: 1px solid purple;
-        border-top: 1px solid blue;
-        border-bottom: 1px solid green;
+        border-left: 1px solid #E80C0C;
+        border-right: 1px solid #4D0577;
+        border-top: 1px solid #4D0577;
+        border-bottom: 1px solid #11D80B;
     }
     
     40% {
-        border-left: 1px solid purple;
-        border-right: 1px solid blue;
-        border-top: 1px solid green;
-        border-bottom: 1px solid orange;
+        border-left: 1px solid #4D0577;
+        border-right: 1px solid #4D0577;
+        border-top: 1px solid #11D80B;
+        border-bottom: 1px solid #E8560C;
     }
     
     60% {
-        border-left: 1px solid blue;
-        border-right: 1px solid green;
-        border-top: 1px solid orange;
-        border-bottom: 1px solid red;
+        border-left: 1px solid #4D0577;
+        border-right: 1px solid #11D80B;
+        border-top: 1px solid #E8560C;
+        border-bottom: 1px solid #E80C0C;
     }
     
     80% {
-        border-left: 1px solid green;
-        border-right: 1px solid orange;
-        border-top: 1px solid red;
-        border-bottom: 1px solid purple;
+        border-left: 1px solid #11D80B;
+        border-right: 1px solid #E8560C;
+        border-top: 1px solid #E80C0C;
+        border-bottom: 1px solid #4D0577;
     }
     
     100% {
-        border-left: 1px solid orange;
-        border-right: 1px solid red;
-        border-top: 1px solid purple;
-        border-bottom: 1px solid blue;
+        border-left: 1px solid #E8560C;
+        border-right: 1px solid #E80C0C;
+        border-top: 1px solid #4D0577;
+        border-bottom: 1px solid #4D0577;
     }
 }
 
 @-o-keyframes border-change-front {
     0% {
-        border-left: 1px solid orange;
-        border-right: 1px solid red;
-        border-top: 1px solid purple;
-        border-bottom: 1px solid blue;
+        border-left: 1px solid #E8560C;
+        border-right: 1px solid #E80C0C;
+        border-top: 1px solid #4D0577;
+        border-bottom: 1px solid #4D0577;
     }
     
     20% {
-        border-left: 1px solid red;
-        border-right: 1px solid purple;
-        border-top: 1px solid blue;
-        border-bottom: 1px solid green;
+        border-left: 1px solid #E80C0C;
+        border-right: 1px solid #4D0577;
+        border-top: 1px solid #4D0577;
+        border-bottom: 1px solid #11D80B;
     }
     
     40% {
-        border-left: 1px solid purple;
-        border-right: 1px solid blue;
-        border-top: 1px solid green;
-        border-bottom: 1px solid orange;
+        border-left: 1px solid #4D0577;
+        border-right: 1px solid #4D0577;
+        border-top: 1px solid #11D80B;
+        border-bottom: 1px solid #E8560C;
     }
     
     60% {
-        border-left: 1px solid blue;
-        border-right: 1px solid green;
-        border-top: 1px solid orange;
-        border-bottom: 1px solid red;
+        border-left: 1px solid #4D0577;
+        border-right: 1px solid #11D80B;
+        border-top: 1px solid #E8560C;
+        border-bottom: 1px solid #E80C0C;
     }
     
     80% {
-        border-left: 1px solid green;
-        border-right: 1px solid orange;
-        border-top: 1px solid red;
-        border-bottom: 1px solid purple;
+        border-left: 1px solid #11D80B;
+        border-right: 1px solid #E8560C;
+        border-top: 1px solid #E80C0C;
+        border-bottom: 1px solid #4D0577;
     }
     
     100% {
-        border-left: 1px solid orange;
-        border-right: 1px solid red;
-        border-top: 1px solid purple;
-        border-bottom: 1px solid blue;
+        border-left: 1px solid #E8560C;
+        border-right: 1px solid #E80C0C;
+        border-top: 1px solid #4D0577;
+        border-bottom: 1px solid #4D0577;
     }
 }
 
